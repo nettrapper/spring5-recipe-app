@@ -29,6 +29,7 @@ public class Recipe {
     @Lob
     private Byte[] image;
 
+    // Cascade means tha operations on recipe are cascaded to the related objects e.g. deletion of the notes.
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
